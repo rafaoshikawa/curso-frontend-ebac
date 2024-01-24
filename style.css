@@ -1,0 +1,74 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.texto {
+  display: block;
+  max-width: 28ch;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(100, 100, 97);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input {
+  padding: 10px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+#number1{
+  margin-bottom: 20px;
+}
+#number2{
+    margin-bottom: 10px;
+}
+#button {
+  background-color: #71d471;
+  padding: 10px;
+  box-shadow: 4px 4px 0 #000;
+  text-align: center;
+  color: #000;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #71d47178;
+}
+
+.message {
+  display: none;
+  padding: 20px;
+  background-color: #ff9a3c;
+  box-shadow: 4px 4px 0 #000;
+  width: 210px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.button-refresh {
+  display: none;
+  background-color: #71d471;
+  padding: 10px;
+  box-shadow: 4px 4px 0 #000;
+  text-align: center;
+  color: #000;
+  font-size: 0.83rem;
+  border: 1.8px solid #111;
+}
+
+.button-refresh:hover {
+  background-color: #71d47178;
+}
