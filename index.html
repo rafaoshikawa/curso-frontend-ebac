@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio Jquery</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <h1 id="tittle">Exercicio Jquery</h1>
+      <h2 id="subtitle">Lista de Tarefas</h2>
+    </header>
+    <div class="container">
+      <form id="task-form">
+        <input type="text" id="task" required placeholder="Ex: Arrumar a casa" />
+        <div class="container-button">
+          <button type="submit">Adicionar +</button>
+          <button type="reset">Limpar</button>
+        </div>
+        <p id="instruction">
+          ao finalizar uma tarefa, clique em cima dela para risca-la!
+        </p>
+      </form>
+      <ul id="task-list">
+
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
