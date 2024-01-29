@@ -3,201 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verde Lar</title>
+    <title>Exercicio plugins Jquery</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;600;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- header -->
-    <header class="header-bg">
-      <div class="header container">
-        <a href="./index.html"><h1>Verde Lar</h1></a>
-        <nav>
-          <ul class="header-menu">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#contato">Contatos</a></li>
-          </ul>
-          <div class="menu-hamburguer-line">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line line3"></span>
-          </div>
-          <ul class="menu-hamburguer">
-            <li>
-              <img
-                class="menu-close"
-                src="./img/menu-close.svg"
-                alt=""
-              />
-            </li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#contato">Contatos</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="intro container-intro">
-      <img
-        src="./img/Blooming-bro.png"
-        alt=" Mulher regando a planta"
-        class="img-intro"
-      />
-      <h2>
-        A melhor loja de <br />
-        <span class="dot">plantas</span> da sua região
-        <span class="heart"> <3 </span>
-      </h2>
-    </section>
-    <div class="carrossel-imagens">
-      <img id="img-carrossel" src="./img/planta-fundo-rosa.jpg" alt="" />
-      <img id="img-carrossel" src="./img/planta-fundo-branco.jpg" alt="" />
-      <img id="img-carrossel" src="./img/planta-carrossel-3.jpg" alt="" />
-    </div>
-
-    <section id="sobre" class="sobre container-intro">
-      <div class="sobre-container">
-        <h3>
-          um pouquinho sobre nós <span class="dot">.</span
-          ><span class="dot">.</span><span class="dot">.</span>
-        </h3>
-        <p>
-          "Verde Lar", a nova loja que abriu suas portas em 2024, celebrando a
-          união entre plantas e família. Aqui, cuidar das plantas é mais do que
-          uma tarefa, é um gesto de amor. Nossos espaços acolhedores oferecem
-          uma variedade encantadora de plantas, enquanto nossa equipe apaixonada
-          está pronta para compartilhar dicas e garantir que cada planta seja
-          tratada como parte da família. Venha fazer parte dessa comunidade
-          verde, onde a natureza e o lar se encontram. "Verde Lar" - cultivando
-          lares cheios de vida.
-        </p>
-      </div>
-      <img
-        class="img-sobre"
-        src="./img/People taking care of plants-amico.png"
-        alt="Pessoas cuidando de planta"
-      />
-    </section>
-
-    <section id="produtos" class="produtos container-produtos">
-      <h3 class="nossos-produtos">
-        nossos produtos <span class="dot">.</span>
-      </h3>
-      <ul class="lista-produtos">
-        <li class="produtos-card">
-          <img src="./img/planta-fundo-rosa.jpg" alt="orquidea" />
-          <p>Suculenta</p>
-          <div class="preco-container">
-            <span class="promocao">R$150</span>
-            <span class="preco">R$ 99</span>
-          </div>
-          <a class="botao-comprar">Comprar agora</a>
-        </li>
-
-        <li class="produtos-card">
-          <img src="./img/planta-fundo-branco.jpg" alt="ficus elastica" />
-          <p>Ficus elastica</p>
-          <div class="preco-container">
-            <span class="promocao">R$250</span>
-            <span class="preco">R$ 129</span>
-          </div>
-          <a class="botao-comprar">Comprar agora</a>
-        </li>
-
-        <li class="produtos-card">
-          <img src="./img/cactus.jpg" alt="Cacto" />
-          <p>Cacto</p>
-          <div class="preco-container">
-            <span class="promocao">R$70</span>
-            <span class="preco">R$ 30</span>
-          </div>
-          <a class="botao-comprar">Comprar agora</a>
-        </li>
-
-        <li class="produtos-card">
-          <img src="./img/planta-fundo-verde.jpg" alt="Suculenta" />
-          <p>Suculenta</p>
-          <div class="preco-container">
-            <span class="promocao">R$150</span>
-            <span class="preco">R$ 99</span>
-          </div>
-          <a class="botao-comprar">Comprar agora</a>
-        </li>
-        <li class="produtos-card">
-          <img src="./img/planta-fundo-branco.jpg" alt="ficus elastica" />
-          <p>Ficus elastica</p>
-          <div class="preco-container">
-            <span class="promocao">R$250</span>
-            <span class="preco">R$ 129</span>
-          </div>
-          <a class="botao-comprar">Comprar agora</a>
-        </li>
-        <li class="produtos-card">
-          <img src="./img/planta-fundo-rosa.jpg" alt="" />
-          <p>Orquideas Mistas</p>
-          <div class="preco-container">
-            <span class="promocao">R$150</span>
-            <span class="preco">R$ 99</span>
-          </div>
-          <a class="botao-comprar">Comprar agora</a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="contato" class="contato container-contato">
-      <h3 class="contato nossos-produtos">
-        contato <span class="dot">.</span>
-      </h3>
-      <form id="form">
-        <label>Nome</label>
-        <input
-          type="text"
-          required
-          placeholder="Seu nome"
-          name="nome"
-          id="nome"
-        />
-        <label>Email</label>
-        <input
-          type="email"
-          required
-          placeholder="Seu melhor email"
-          name="email"
-          id="email"
-        />
-        <label>Celular</label>
-        <input
-          type="text"
-          required
-          placeholder="(00) 00000-0000"
-          name="telefone"
-          class="telefone"
-        /><!-- esse input tem que ser do tipo texto mesmo aceitando só numeros por conta da mascara que estamos aplicando, ela automaticamente ja transforma o input em tipo numerico -->
-        <label>Produto Selecionado</label>
-        <input
-          type="text"
-          required
-          placeholder="Produto"
-          name="produto"
-          id="produto"
-        />
-        <label id="mensagem">Mensagem (opcional):</label>
-        <textarea
-          name="text"
-          placeholder="Digite sua mensagem"
-          id=""
-        ></textarea>
-        <button id="submit" src="/" type="submit">Enviar</button>
+    <div class="container">
+      <form>
+        <div>
+          <label>Nome</label>
+          <input
+            type="text"
+            required
+            name="nome"
+            id="nome"
+            placeholder="Digite seu nome"
+          />
+        </div>
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            required
+            name="email"
+            id="email"
+            placeholder="Digite seu email"
+          />
+        </div>
+        <div>
+          <label>Telefone</label>
+          <input
+            type="text"
+            required
+            name="telefone"
+            id="telefone"
+            placeholder="(00) 00000-0000"
+          />
+        </div>
+        <div>
+          <label>CPF</label>
+          <input
+            type="text"
+            required
+            name="cpf"
+            id="cpf"
+            placeholder="000.000.000-00"
+          />
+        </div>
+				<div>
+					<button type="submit">Enviar</button>
+				</div>
       </form>
-    </section>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./lib/jquery.mask.min.js"></script>
     <script src="./lib/jquery.validate.min.js"></script>

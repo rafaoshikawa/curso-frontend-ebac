@@ -1,398 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-html,
-body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-.dot {
-  color: #5cbe78;
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'roboto', sans-serif;
+	box-sizing: border-box;
 }
 
-.heart {
-  color: #9e59aa;
+.container{
+	max-width: 900px;
+	margin: 0 auto;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
-.header-bg {
-  background-color: #ffffff;
+
+form{
+	display: grid;
+	gap: 20px;
+}
+form label{
+	display: grid;
+	margin-bottom: 5px;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 900px;
-  align-items: center;
-  padding: 30px;
-  margin: 0 auto;
+form input{
+	border-radius: 5px;
+	padding: 10px;
+	width: 300px;
+	box-shadow: 4px 4px 0 #000;
+	font-size: 1rem;
+	margin-bottom: 10px;
 }
 
-.header h1 {
-  font-family: "fira sans";
-  font-weight: bold;
-  color: #5cbe78;
-  font-size: 2.5rem;
+button{
+	cursor: pointer;
+	width: 300px;
+	height: 50px;
+	background: #e64b1a;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	box-shadow: 4px 4px 0 #000;
 }
 
-.header-menu {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-.header-menu a {
-  color: #111;
-  font-size: 1.3rem;
+button:hover{
+	background: #e64a1a9d;
+
 }
 
-.header-menu li {
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: 0.3s;
-}
-.header-menu li:hover {
-  transform: scale(1.1);
-  font-weight: 600;
+/* um fato curioso é de que a classe error é adicionada automaticamente pelo jQuery Validate quando ocorre um erro de validação em um campo específico.*/
+label.error {
+  color: red;
 }
 
-.menu-hamburguer-line {
-  display: none;
-  width: 30px;
-  margin: 20px auto;
+input.error{
+	border: 2px solid red;
 }
 
-.menu-hamburguer-line:hover {
-  cursor: pointer;
-}
-
-.menu-hamburguer {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.644);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  align-items: start;
-  justify-content: start;
-}
-
-.menu-hamburguer li {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.line {
-  border-radius: 2px;
-  cursor: pointer;
-  display: block;
-  height: 4px;
-  width: 100%;
-  margin-bottom: 5px;
-  background-color: #111;
-}
-.line3 {
-  width: 24px;
-}
-.menu-close{
-  cursor: pointer;
-}
-
-.img-intro {
-  max-width: 400px;
-  display: block;
-}
-
-.img-sobre {
-  max-width: 400px;
-  display: block;
-}
-
-.container-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 900px;
-  align-items: center;
-  padding: 30px;
-  margin: 0 auto;
-}
-
-.intro h2 {
-  font-family: "fira sans", sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: 1.5px;
-}
-
-.carrossel-imagens {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 900px;
-  align-items: center;
-  padding: 30px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  overflow-x: auto;
-}
-#img-carrossel {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Altere os valores conforme necessário */
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.sobre {
-  text-align: end;
-  margin-bottom: 50px;
-}
-.sobre h3 {
-  margin-right: 30px;
-  font-family: "roboto", sans-serif;
-  margin-bottom: 20px;
-  font-size: 3rem;
-}
-.sobre p {
-  margin-right: 30px;
-  max-width: 50ch;
-  line-height: 1.8;
-  letter-spacing: 0.8px;
-  font-size: 1rem;
-}
-
-.container-produtos {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 900px;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
-  margin: 0 auto;
-}
-
-.nossos-produtos {
-  font-size: 3rem;
-  margin-bottom: 40px;
-}
-
-.lista-produtos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-.produtos-card:nth-child(even) {
-  padding-top: 35px;
-}
-.produtos-card {
-  gap: 15px;
-  display: grid;
-  text-align: start;
-  transition: 0.3s;
-}
-.produtos-card:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  font-weight: 600;
-}
-
-.produtos img {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease-in-out;
-}
-.produtos-card p {
-  font-family: "roboto", Courier, monospace;
-  font-weight: 500;
-}
-
-.promocao {
-  color: rgb(136, 133, 133);
-  text-decoration: line-through;
-}
-.preco-container {
-  display: flex;
-  gap: 10px;
-}
-
-.botao-comprar {
-  color: #111;
-  font-weight: bold;
-}
-
-.botao-comprar:hover {
-  color: #6d9d30;
-}
-
-.menu-close {
-  margin-top: 5px;
-  width: 50px;
-  height: 50px;
-}
-
-.container-contato {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 900px;
-  align-items: center;
-  padding: 30px;
-  margin: 0 auto;
-}
-form {
-  display: grid;
-  gap: 10px;
-}
-label{
-  margin-top: 20px;
-}
-input {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 240px;
-  padding: 5px 5px;
-  font-family: "roboto", sans-serif;
-  border-radius: 5px;
-}
-
-textarea {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-family: "roboto", sans-serif;
-  width: 240px;
-  height: 100px;
-  padding: 5px 5px;
-  resize: none;
-  border-radius: 5px;
-}
-
-#submit {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 240px;
-  padding: 10px 5px;
-  cursor: pointer;
-  background-color: #5cbe78;
-  border-radius: 5px;
-  color: #ffffff;
-}
-
-#submit:hover {
-  font-weight: bold;
-  background-color: #5cbe78cc;
-}
-
-@media (max-width: 780px) {
-  body {
-    padding: 20px;
-  }
-  .container-intro {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-intro {
-    margin-left: 150px;
-  }
-  .container-intro h3 {
-    text-align: center;
-  }
-  .container-intro p {
-    text-align: center;
-    max-width: max-content;
-    font-size: 1.5rem;
-  }
-  .lista-produtos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 650px) {
-  body {
-    padding: 20px;
-  }
-  .header-menu {
-    display: none;
-  }
-  .menu-hamburguer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    gap: 30px;
-  }
-  .menu-hamburguer-line {
-    display: block;
-  }
-
-  .menu-hamburguer li a {
-    color: #111;
-    font-size: 1.5rem;
-  }
-  .img-intro {
-    width: 200px;
-    height: 200px;
-  }
-  .intro h2 {
-    font-size: 2.3rem;
-  }
-
-  .carrosel-imagens {
-    display: flex;
-    flex: 1;
-    min-width: 200px;
-    overflow-x: auto; /* defini o min width porque quando der no minimo de 280px ele nao vai diminuir mais, assim ele estoura o container do site e cria um scroll lateral */
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
-  .lista-produtos {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-  }
-
-  .produtos-card {
-    margin-bottom: 20px;
-  }
-  .produtos-card:nth-child(even) {
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .img-intro {
-    width: 200px;
-    height: 200px;
-  }
-
-  .intro h2 {
-    font-size: 2rem;
-  }
-  .container-intro img {
-    display: none;
-  }
-  .sobre-container h3 {
-    font-size: 2.5rem;
-  }
-
-  .sobre-container p {
-    font-size: 1rem;
-    text-align: start;
-  }
-}
