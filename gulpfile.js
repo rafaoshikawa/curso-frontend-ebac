@@ -1,4 +1,4 @@
-//estou importante os pacotes instalados.
+
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass")); //o gulp-sass é um pacote responsavel por integrar o sass ao gulp mas quem vai fazer a compilação do sass, é o pacote do sass, por isso 2 require
 const sourcemaps = require("gulp-sourcemaps");//mapear erros de scss caso
