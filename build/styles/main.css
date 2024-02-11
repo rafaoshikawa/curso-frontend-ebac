@@ -21,6 +21,7 @@ body {
 }
 .header {
   display: flex;
+  grid-gap: 30px;
   justify-content: space-between;
   padding: 20px 0;
   align-items: center;
@@ -68,8 +69,8 @@ section .products {
 section .products .product-item {
   max-width: 350px;
   display: grid;
-  margin-bottom: 100px;
   text-align: center;
+  margin: 0 auto 50px auto;
 }
 @media (max-width: 768px) {
   section .products .product-item {

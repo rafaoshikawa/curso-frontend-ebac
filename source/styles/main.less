@@ -26,6 +26,7 @@ body {
 }
 .header {
   display: flex;
+  grid-gap: 30px;
 
   justify-content: space-between;
   padding: 20px 0;
@@ -33,19 +34,18 @@ body {
 
   @media @breakpointMobile {
     flex-direction: column;
-
   }
 
   .menu {
     display: flex;
     max-width: 100%;
     padding-left: 45px;
-    
+
     @media @breakpointMobile {
       margin-top: 10px;
     }
   }
-   a {
+  a {
     margin-right: 40px;
     display: flex;
     font-size: 1.3rem;
@@ -53,8 +53,6 @@ body {
 
     &:hover {
       color: @cor-hover;
-
-      
     }
   }
 }
@@ -70,15 +68,15 @@ section {
   .products {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     @media @breakpointMobile {
       grid-template-columns: 1fr;
     }
     .product-item {
       max-width: 350px;
       display: grid;
-      margin-bottom: 100px;
       text-align: center;
-
+      margin: 0 auto 50px auto;
       @media @breakpointTablet {
         max-width: 80%;
       }
