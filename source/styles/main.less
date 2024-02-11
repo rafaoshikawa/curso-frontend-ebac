@@ -1,0 +1,120 @@
+@import "variaveis.less";
+@breakpointTablet: ~"(max-width: 768px)";
+@breakpointMobile: ~"(max-width: 500px)";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif;
+  color: @cor-text;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @media @breakpointTablet {
+    max-width: 80%;
+  }
+}
+
+body {
+  background-color: @cor-background;
+}
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+
+  @media @breakpointMobile {
+    flex-direction: column;
+
+  }
+
+  .menu {
+    display: flex;
+    max-width: 100%;
+    padding-left: 45px;
+    
+    @media @breakpointMobile {
+      margin-top: 10px;
+    }
+  }
+   a {
+    margin-right: 40px;
+    display: flex;
+    font-size: 1.3rem;
+    transition: all ease 0.3s;
+
+    &:hover {
+      color: @cor-hover;
+
+      
+    }
+  }
+}
+
+section {
+  h2 {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 4px solid @cor-text;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media @breakpointMobile {
+      grid-template-columns: 1fr;
+    }
+    .product-item {
+      max-width: 350px;
+      display: grid;
+      margin-bottom: 100px;
+      text-align: center;
+
+      @media @breakpointTablet {
+        max-width: 80%;
+      }
+      @media @breakpointMobile {
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+    }
+    img {
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    h4 {
+      font-size: 1.3rem;
+      padding: 10px 0;
+    }
+    p {
+      color: @cor-descricao;
+      padding: 10px 0;
+    }
+    .product-button {
+      background-color: @cor-button;
+      padding: 15px 10px;
+      font-weight: bold;
+      transition: all ease 0.3s;
+      border-radius: 30px;
+
+      &:hover {
+        background-color: @cor-hover;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
