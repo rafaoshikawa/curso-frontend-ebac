@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then(function (json) {
+      // esse then tem comportamento de TRY
       // Exibe os dados obtidos no console, fica melhor para escolher que dados vamos pegar
       console.log(json);
 
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link.href = json.html_url;
     })
     .catch(function (error) {
+      // Bloco executado se ocorrer um erro e o Finally é opcional mas seria depois desse bloco
       console.error("Erro ao obter dados:", error);
     });
 });
