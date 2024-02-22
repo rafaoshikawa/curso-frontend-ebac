@@ -1,5 +1,3 @@
-
-
 // Classe Pessoa
 function Pessoa(nome, idade, cidade) {
   this.nome = nome;
@@ -50,8 +48,17 @@ estudante2.estudar();    // Método específico da classe Estudante
 trabalhador2.trabalhar();  // Método específico da classe Trabalhador
 
 
-
-
 trabalhador1.saudacao();   // Métodos da classe Pessoa
 trabalhador1.trabalhar();  // Método específico da classe Trabalhador
 
+
+
+// Verificando tipos usando typeof, aqui ele dira que as instancias serao do tipo OBJECT
+console.log(typeof estudante1); // Saída: object
+console.log(typeof estudante2); // Saída: object
+console.log(typeof trabalhador1); // Saída: object
+
+// Verificando se uma instância é uma instância de uma classe específica usando instanceof.
+console.log(estudante1 instanceof Pessoa);
+console.log(estudante2 instanceof Pessoa); 
+console.log(trabalhador1 instanceof Pessoa); 
