@@ -18,20 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
       /* "response" para indicar que se trata da resposta do servidor.  mas poderia ser qualquer nome*/
       return response.json();
     })
-    .then(function (json) {
+    .then(function (data) {
       // esse then tem comportamento de TRY
       // Exibe os dados obtidos no console, fica melhor para escolher que dados vamos pegar
-      console.log(json);
+      console.log(data);
 
       // Atualiza os elementos HTML com os dados obtidos
-      name.innerHTML = json.name;
-      username.innerHTML = "@" + json.login;
-      bio.innerHTML = json.bio;
-      reposit.innerHTML = json.public_repos;
-      followers.innerHTML = json.followers;
-      following.innerHTML = json.following;
-      avatar.src = json.avatar_url;
-      link.href = json.html_url;
+      name.innerHTML = data.name;
+      username.innerHTML = "@" + data.login;
+      bio.innerHTML = data.bio;
+      reposit.innerHTML = data.public_repos;
+      followers.innerHTML = data.followers;
+      following.innerHTML = data.following;
+      avatar.src = data.avatar_url;
+      link.href = data.html_url;
     })
     .catch(function (error) {
       // Bloco executado se ocorrer um erro e o Finally é opcional mas seria depois desse bloco
